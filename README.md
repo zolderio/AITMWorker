@@ -1,6 +1,8 @@
 # AITMWorker
 This repository contains a proof of concept that allows you to perform AITM phishing attacks on Microsoft tenants by using a Cloudflare Worker. We are protecting hundreds of Microsoft tenants against phishing attacks using the approach described [here](https://zolder.io/using-honeytokens-to-detect-aitm-phishing-attacks-on-your-microsoft-365-tenant/).
 
+We've also included a separate version in the repository that directly phishes for access- and refreshtokens. You can read the blog [here](https://zolder.io/blog/phishing-for-refresh-tokens/).
+
 We detected previously unknown phishing attacks on our clients abusing Cloudflare Workers. We tried to reproduce the attack by building our own Cloudflare Worker, to demonstrate how these attackers are abusing Cloudflare. This repository contains the code.
 
 # How to use
